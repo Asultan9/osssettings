@@ -23,7 +23,7 @@ git commit -m "add some foobar"
 
 Push to the new branch
 ```sh
-git push origin feature/foobar
+git push origin {category}-{feature}/foobar
 ```
 
 Create a new pull request (https://github.com/castyte/osssettings/compare)
