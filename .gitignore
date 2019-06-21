@@ -1,9 +1,6 @@
-# Theos
+# Theos/custom
 .theos/
 packages/
-
-
-
 
 # Xcode
 #
@@ -12,9 +9,7 @@ packages/
 ## Build generated
 build/
 DerivedData/
-Makefile
-com.castyte.osssettings.plist
-control
+
 
 ## Various settings
 *.pbxuser
