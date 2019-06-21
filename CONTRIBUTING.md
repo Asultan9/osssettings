@@ -1,8 +1,8 @@
 # Contributing
-Thank you for considering contributing to this project. If you don't want to contribute code, you can always [open an issue](https://github.com/The-SourceCode/Open-SourceBot/issues/new) and share your ideas or report bugs/typos.
+Thank you for considering contributing to this project. If you don't want to contribute code, you can always [open an issue](https://github.com/castyte/osssettings/issues/new) and share your ideas or report bugs/typos.
 
 ## How to contribute
-Fork the repository (https://github.com/The-SourceCode/Open-SourceBot/fork)
+Fork the repository (https://github.com/castyte/osssettings/fork)
 
 Clone your fork
 ```sh
@@ -45,4 +45,4 @@ There are a couple requirements that need to be met before a pull request can be
 If you have any questions about these requirements, feel free to ask.
 
 ## Code of Conduct
-This project has a [Code of Conduct](https://github.com/castyte/osssettings/CODE_OF_CONDUCT.md) and [LICENCE](https://github.com/castyte/osssettings/LICENCE) which all contributers must follow.
+This project has a [Code of Conduct](https://github.com/castyte/osssettings/CODE_OF_CONDUCT.md) and [LICENCE](https://github.com/castyte/osssettings/LICENCE) which all contributors must follow.
