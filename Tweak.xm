@@ -3,10 +3,18 @@
 #import <Foundation/NSUserDefaults.h>
 
 static NSString *domainString = @"com.castyte.osssettings";
+BOOL SBTodayHomeDisabled;
+BOOL SBTodayLSDisabled;
 
 @interface NSUserDefaults (UFS_Category)
 - (id)objectForKey:(NSString *)key inDomain:(NSString *)domain;
 - (void)setObject:(id)value forKey:(NSString *)key inDomain:(NSString *)domain;
+@end
+
+@interface SBRootFolderView : UIView // Disable today view interface (Thanks @NepetaDev)
+
+-(UIViewController *)todayViewController;
+
 @end
 
 
@@ -58,6 +66,37 @@ static NSString *domainString = @"com.castyte.osssettings";
 %end
 
 
+%hook SBMainDisplayPolicyAggregator
+
+-(BOOL)_allowsCapabilityLockScreenTodayViewWithExplanation:(id*)arg1 { // Disable today view LS (Thanks @NepetaDev)
+    return !(SBTodayLSDisabled);
+}
+
+-(BOOL)_allowsCapabilityTodayViewWithExplanation:(id*)arg1 { // Disable today view LS (Thanks @NepetaDev)
+    return !(SBTodayLSDisabled);
+}
+
+%end
+
+%hook SBRootFolderView
+
+-(unsigned long long)_minusPageCount { // Disable today view HOME (Thanks @NepetaDev)
+    return !(SBTodayHomeDisabled);
+}
+
+-(void)_layoutSubviewsForTodayView { // Disable today view HOME (Thanks @NepetaDev)
+    %orig;
+    [self todayViewController].view.hidden = SBTodayHomeDisabled;
+}
+
+-(void)beginPageStateTransitionToState:(long long)arg1 animated:(BOOL)arg2 interactive:(BOOL)arg3  { // Disable today view HOME (Thanks @NepetaDev)
+    if (SBTodayHomeDisabled && arg1 == 2) return; // 0 - icons; 2 - today view; 3 - spotlight?
+    %orig;
+}
+
+%end
+
+
 // ---------- CATEGORY: System Apps (SA)
 
 // ---- APP: Settings
@@ -97,6 +136,8 @@ static NSString *domainString = @"com.castyte.osssettings";
 %ctor{
 	// Check if main switch is enabled, if is run main group
 	if([(NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"tweakEnabled" inDomain:domainString] boolValue]){
+		SBTodayHomeDisabled = [(NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"SBTodayHomeDisabled" inDomain:domainString] boolValue];
+		SBTodayLSDisabled = [(NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"SBTodayLSDisabled" inDomain:domainString] boolValue];
 		%init(main);
 	}
 }

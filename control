@@ -1,7 +1,7 @@
 Package: com.castyte.osssettings
 Name: OSS Settings
 Depends: mobilesubstrate
-Version: prerelease-1
+Version: 0--prerelease-2
 Architecture: iphoneos-arm
 Description: A collection of useful settings for jailbroken iOS
 Maintainer: Castyte

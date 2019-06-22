@@ -54,6 +54,18 @@
 			<key>default</key>
 			<false/>
 		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>defaults</key>
+			<string>com.castyte.osssettings</string>
+			<key>key</key>
+			<string>SBTodayHomeDisabled</string>
+			<key>label</key>
+			<string>Disable today view</string>
+			<key>default</key>
+			<false/>
+		</dict>
 	</array>
 	<key>title</key>
 	<string>OSSSettingsPrefs</string>

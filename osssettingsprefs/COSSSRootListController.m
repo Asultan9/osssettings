@@ -31,6 +31,14 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/castyte/osssettings/issues/new/choose"]];
 }
 
+-(void)twitter_castyte{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/castyte"]];
+}
+
+-(void)twitter_nepeta{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/NepetaDev"]];
+}
+
 @end
 
 

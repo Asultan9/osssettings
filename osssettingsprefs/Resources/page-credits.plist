@@ -7,13 +7,25 @@
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Main contributors</string>
 		</dict>
 		<dict>
-            <key>cell</key>
-            <string>PSStaticTextCell</string>
-            <key>label</key>
-            <string>@castyte</string>
-        </dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>@castyte</string>
+            <key>action</key>
+        	<string>twitter_castyte</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>@NepetaDev</string>
+            <key>action</key>
+        	<string>twitter_nepeta</string>
+		</dict>
 	</array>
 	<key>title</key>
 	<string>Credits</string>
