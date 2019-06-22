@@ -12,6 +12,24 @@ static NSString *domainString = @"com.castyte.osssettings";
 
 %group main
 
+
+// ---------- CATEGORY: Springboard (SB)
+
+// ---- SECTION: Dock
+
+%hook SBDockView
+
+-(void)setBackgroundAlpha:(CGFloat)arg1{ // Hide dock BG
+	if([(NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"SBdockAlphaEnabled" inDomain:domainString] boolValue]){
+		return %orig([[[NSUserDefaults standardUserDefaults] objectForKey:@"SBdockAlpha" inDomain:domainString] floatValue]);
+	}
+	
+	%orig();
+}
+
+%end
+
+
 // ---------- CATEGORY: System Apps (SA)
 
 // ---- APP: Settings

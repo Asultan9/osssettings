@@ -8,29 +8,33 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Springboard</string>
+			<string>Dock</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSSwitchCell</string>
-			<key>default</key>
-			<true/>
 			<key>defaults</key>
 			<string>com.castyte.osssettings</string>
 			<key>key</key>
-			<string>AwesomeSwitch1</string>
+			<string>SBdockAlphaEnabled</string>
 			<key>label</key>
-			<string>Awesome Switch 1</string>
+			<string>Custom background alpha</string>
+			<key>default</key>
+			<false/>
 		</dict>
 		<dict>
-            <key>cell</key>
-            <string>PSLinkCell</string>
-            <key>label</key>
-            <string>Springboard</string>
-            <key>detail</key>
-            <string>PrefsCatSpringboard</string>
-            <key>isController</key>
-            <true/>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>defaults</key>
+			<string>com.castyte.osssettings</string>
+			<key>key</key>
+			<string>SBdockAlpha</string>
+			<key>min</key>
+			<integer>0</integer>
+			<key>max</key>
+			<integer>100</integer>
+			<key>showValue</key>
+			<true/>
 		</dict>
 	</array>
 	<key>title</key>
