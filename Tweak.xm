@@ -30,6 +30,34 @@ static NSString *domainString = @"com.castyte.osssettings";
 %end
 
 
+// ---- SECTION: Other
+
+%hook SpringBoard
+
+-(long long)homeScreenRotationStyle { // Disble rotation on + devices
+	if([(NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"SBrotationDisabled" inDomain:domainString] boolValue]){
+		return 0;
+	}
+	return %orig;
+}
+
+-(BOOL)homeScreenRotationStyleWantsUIKitRotation { // Disble rotation on + devices
+	if([(NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"SBrotationDisabled" inDomain:domainString] boolValue]){
+		return NO;
+	}
+	return %orig;
+}
+
+-(BOOL)homeScreenSupportsRotation { // Disble rotation on + devices
+	if([(NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"SBrotationDisabled" inDomain:domainString] boolValue]){
+		return NO;
+	}
+	return %orig;
+}
+
+%end
+
+
 // ---------- CATEGORY: System Apps (SA)
 
 // ---- APP: Settings
