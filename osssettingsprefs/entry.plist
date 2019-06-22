@@ -10,7 +10,7 @@
 		<string>PSLinkCell</string>
 		<key>detail</key>
 		<string>COSSSRootListController</string>
-		<key>icon</key>
+			<key>icon</key>
 		<string>icon.png</string>
 		<key>isController</key>
 		<true/>

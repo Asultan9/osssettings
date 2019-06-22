@@ -1,7 +1,7 @@
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = OSSSettings
-OSSSettings2_FILES = Tweak.xm
+OSSSettings_FILES = Tweak.xm
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 
