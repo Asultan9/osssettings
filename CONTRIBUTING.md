@@ -46,4 +46,4 @@ There are requirements that need to be met before a pull request can be accepted
 If you have any questions about these requirements, feel free to ask.
 
 ## Code of Conduct
-This project has a [Code of Conduct](https://github.com/castyte/osssettings/blob/master/CODE_OF_CONDUCT.md) and [LICENCE](https://github.com/castyte/osssettings/blob/master/LICENCE) which all contributors must follow.
+This project has a [Code of Conduct](https://github.com/castyte/osssettings/blob/master/CODE_OF_CONDUCT.md) and [LICENSE](https://github.com/castyte/osssettings/blob/master/LICENSE) which all contributors must follow.
