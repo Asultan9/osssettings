@@ -9,7 +9,7 @@
 		_specifiers = [[self loadSpecifiersFromPlistName:@"Root" target:self] retain];
 	}
     UIBarButtonItem *respringButton = [[UIBarButtonItem alloc]  initWithTitle:@"Apply" style:UIBarButtonItemStylePlain target:self action:@selector(respring)];
-    respringButton.tintColor=[UIColor colorWithRed:1 green:0.17 blue:0.33 alpha:1];
+    respringButton.tintColor=[UIColor colorWithRed:1 green:0.17 blue:0.9 alpha:1];
     [UIView animateWithDuration:.5
                           delay:0
                         options:UIViewAnimationOptionCurveEaseInOut
