@@ -31,6 +31,8 @@
 			<string>SAwifiString</string>
 			<key>label</key>
 			<string>WiFi Connected String:</string>
+			<key>placeholder</key>
+			<string>default</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -41,6 +43,8 @@
 			<string>SAbluetoothString</string>
 			<key>label</key>
 			<string>Bluetooth Connected String:</string>
+			<key>placeholder</key>
+			<string>default</string>
 		</dict>
 	</array>
 	<key>title</key>
