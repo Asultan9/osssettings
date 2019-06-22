@@ -32,7 +32,6 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
-*.deb
 
 # CocoaPods
 #
