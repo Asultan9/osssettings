@@ -19,11 +19,11 @@ static NSString *domainString = @"com.castyte.osssettings";
 
 %hook SBDockView
 
--(void)setBackgroundAlpha:(CGFloat)arg1{ // Hide dock BG
+-(void)setBackgroundAlpha:(CGFloat)arg1{ // Custom Dock Alpha
 	if([(NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"SBdockAlphaEnabled" inDomain:domainString] boolValue]){
 		return %orig([[[NSUserDefaults standardUserDefaults] objectForKey:@"SBdockAlpha" inDomain:domainString] floatValue]);
 	}
-	
+
 	%orig();
 }
 
