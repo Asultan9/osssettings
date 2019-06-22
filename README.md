@@ -1,4 +1,4 @@
-# OSS Settings
+# ![ ](https://raw.githubusercontent.com/castyte/osssettings/master/osssettingsprefs/Resources/icon.png?token=AJEWHMY47VZF2J7VZDTDYK25C4VEO) OSS Settings
 ##### OSS Settings is a project designed to gather as many settings as possible which may be useful to a user on jailbroken iOS into one package, similar to Springtomize or MiscSettings. OSS Settings is different as the project is fully open-source under the GPL-3.0 licence, and anyone can contribute.
 
 ## How to contribute
