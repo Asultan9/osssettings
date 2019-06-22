@@ -27,8 +27,8 @@ git push origin {category}-{feature}/foobar
 ```
 
 Create a new pull request using the templates below for the body:  
-[Feature addition](https://raw.githubusercontent.com/castyte/osssettings/master/.github/PULL_REQUEST_TEMPLATE/bug.md)  
-[Bug fix](https://raw.githubusercontent.com/castyte/osssettings/master/.github/PULL_REQUEST_TEMPLATE/feature.md)  
+[Bug fix](https://raw.githubusercontent.com/castyte/osssettings/master/.github/PULL_REQUEST_TEMPLATE/bug.md)  
+[Feature addition](https://raw.githubusercontent.com/castyte/osssettings/master/.github/PULL_REQUEST_TEMPLATE/feature.md)  
 
 ## Requirements
 There are requirements that need to be met before a pull request can be accepted.
