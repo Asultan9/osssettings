@@ -6,6 +6,7 @@ OSSSettingsPrefs_INSTALL_PATH = /Library/PreferenceBundles
 OSSSettingsPrefs_FRAMEWORKS = UIKit
 OSSSettingsPrefs_PRIVATE_FRAMEWORKS = Preferences
 
+ARCHS = armv7 arm64 #arm64e
 
 include $(THEOS_MAKE_PATH)/bundle.mk
 
