@@ -26,11 +26,9 @@ Push to the new branch
 git push origin {category}-{feature}/foobar
 ```
 
-Create a new pull request (https://github.com/castyte/osssettings/compare)
-In the pull request body include:
-- Features added along with the categories
-- Details about the test device(s) you used
-- Other features which may cause this feature to not function (eg. a feature which disables the control center and another that makes it smaller)
+Create a new pull request with the correct template:  
+[Feature addition](https://github.com/castyte/osssettings/compare?template=feature.md)  
+[Bug fix](https://github.com/castyte/osssettings/compare?template=bug.md)  
 
 ## Requirements
 There are requirements that need to be met before a pull request can be accepted.
