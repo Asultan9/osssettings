@@ -117,6 +117,14 @@
 			<string>(c) Castyte 2019</string>
 		</dict>
 		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Report bugs or request features</string>
+                  <key>action</key>
+                  <string>githubIssue</string>
+		</dict>
+		<dict>
             <key>cell</key>
             <string>PSLinkCell</string>
             <key>label</key>

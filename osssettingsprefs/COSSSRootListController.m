@@ -19,12 +19,16 @@
 	return _specifiers;
 }
 
--(void) respring{
+-(void)respring{
     
     pid_t respringID;
     char *argv[] = {"/usr/bin/killall", "backboardd", NULL};
     posix_spawn(&respringID, argv[0], NULL, NULL, argv, NULL);
 	waitpid(respringID, NULL, WEXITED);
+}
+
+-(void)githubIssue{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/castyte/osssettings/issues/new/choose"]];
 }
 
 @end
