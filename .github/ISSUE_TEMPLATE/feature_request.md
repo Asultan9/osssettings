@@ -1,0 +1,20 @@
+---
+name: Feature request
+about: Suggest an idea for this project
+title: "[FEATURE REQ] "
+labels: enhancement
+assignees: ''
+
+---
+
+**What category does the feature fit into?**
+[Springboard / Lockscreen / Status Bar / Notifications / Control Centre / App Switcher / System Wide / System Apps]
+
+**Describe the solution you'd like**
+A clear and concise description of what you want to happen.
+
+**Describe alternatives you've considered**
+A clear and concise description of any alternative solutions or features you've considered.
+
+**Additional context**
+Add any other context or screenshots about the feature request here.
