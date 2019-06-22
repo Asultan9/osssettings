@@ -26,9 +26,9 @@ Push to the new branch
 git push origin {category}-{feature}/foobar
 ```
 
-Create a new pull request with the correct template:  
-[Feature addition](https://github.com/castyte/osssettings/compare?template=feature.md)  
-[Bug fix](https://github.com/castyte/osssettings/compare?template=bug.md)  
+Create a new pull request using the templates below for the body:  
+[Feature addition](https://raw.githubusercontent.com/castyte/osssettings/master/.github/PULL_REQUEST_TEMPLATE/bug.md)  
+[Bug fix](https://raw.githubusercontent.com/castyte/osssettings/master/.github/PULL_REQUEST_TEMPLATE/feature.md)  
 
 ## Requirements
 There are requirements that need to be met before a pull request can be accepted.
