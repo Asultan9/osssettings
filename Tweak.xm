@@ -123,7 +123,24 @@ BOOL SBTodayLSDisabled;
 
 %end
 
+// ---------- CATEGORY: Status Bar (BAR)
 
+// ---- SECTION: Carrier
+
+%hook SBTelephonyManager
+
+-(void)operatorNameChanged:(id)arg1 name:(id)arg2{ // Hide carrier / custom carrier
+	if([(NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"BARcarrierHide" inDomain:domainString] boolValue]){
+		return %orig(arg1, @"");
+	}
+	NSString *BARcarrierString = [[NSUserDefaults standardUserDefaults] objectForKey:@"BARcarrierString" inDomain:domainString];
+	if([BARcarrierString isEqual:@""]){
+		return %orig();
+	}
+	%orig(arg1, BARcarrierString);
+}
+
+%end
 
 
 // ---------- CATEGORY: System Apps (SA)
