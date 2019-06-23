@@ -1,3 +1,4 @@
+#import "Tweak.h"
 
 // Preferences setup
 #import <Foundation/NSUserDefaults.h>
@@ -5,18 +6,6 @@
 static NSString *domainString = @"com.castyte.osssettings";
 BOOL SBTodayHomeDisabled;
 BOOL SBTodayLSDisabled;
-
-@interface NSUserDefaults (UFS_Category)
-- (id)objectForKey:(NSString *)key inDomain:(NSString *)domain;
-- (void)setObject:(id)value forKey:(NSString *)key inDomain:(NSString *)domain;
-@end
-
-@interface SBRootFolderView : UIView // Disable today view interface (Thanks @NepetaDev)
-
--(UIViewController *)todayViewController;
-
-@end
-
 
 %group main
 
@@ -33,6 +22,19 @@ BOOL SBTodayLSDisabled;
 	}
 
 	%orig();
+}
+
+%end
+
+// ---- SECTION: Folders
+
+%hook SBFolderBackgroundView // Hide opened folder background
+
+-(id)initWithFrame:(struct CGRect)arg1{
+	if([(NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"SBopenFolderBGhide" inDomain:domainString] boolValue]){
+		return 0;
+	}
+	return %orig();
 }
 
 %end
@@ -66,18 +68,6 @@ BOOL SBTodayLSDisabled;
 %end
 
 
-%hook SBMainDisplayPolicyAggregator
-
--(BOOL)_allowsCapabilityLockScreenTodayViewWithExplanation:(id*)arg1 { // Disable today view LS (Thanks @NepetaDev)
-    return !(SBTodayLSDisabled);
-}
-
--(BOOL)_allowsCapabilityTodayViewWithExplanation:(id*)arg1 { // Disable today view LS (Thanks @NepetaDev)
-    return !(SBTodayLSDisabled);
-}
-
-%end
-
 %hook SBRootFolderView
 
 -(unsigned long long)_minusPageCount { // Disable today view HOME (Thanks @NepetaDev)
@@ -95,6 +85,45 @@ BOOL SBTodayLSDisabled;
 }
 
 %end
+
+// ---------- CATEGORY: Lockscreen (LS)
+
+
+// ---- SECTION: Idle Timer (Auto Lock)
+
+%hook SBDashBoardIdleTimerProvider
+
+-(bool)isIdleTimerEnabled { // Disable idle timout while playing media or charging (@NepetaDev)
+    if ([(NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"SWnoidleCharging" inDomain:domainString] boolValue]) {
+        SBUIController *controller = [%c(SBUIController) sharedInstanceIfExists];
+        if (controller && [controller isOnAC]) return false;
+    }
+
+    if ([(NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"SWnoidleMedia" inDomain:domainString] boolValue]) {
+        SBMediaController *controller = [%c(SBMediaController) sharedInstance];
+        if (controller && [controller isPlaying]) return false;
+    }
+
+    return %orig;
+}
+
+%end
+
+// ---- SECTION: Other
+
+%hook SBMainDisplayPolicyAggregator
+
+-(BOOL)_allowsCapabilityLockScreenTodayViewWithExplanation:(id*)arg1 { // Disable today view LS (Thanks @NepetaDev)
+    return !(SBTodayLSDisabled);
+}
+
+-(BOOL)_allowsCapabilityTodayViewWithExplanation:(id*)arg1 { // Disable today view LS (Thanks @NepetaDev)
+    return !(SBTodayLSDisabled);
+}
+
+%end
+
+
 
 
 // ---------- CATEGORY: System Apps (SA)

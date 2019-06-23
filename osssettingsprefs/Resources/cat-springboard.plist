@@ -40,6 +40,24 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
+			<string>Folders</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>defaults</key>
+			<string>com.castyte.osssettings</string>
+			<key>key</key>
+			<string>SBopenFolderBGhide</string>
+			<key>label</key>
+			<string>Hide opened folder background</string>
+			<key>default</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
 			<string>Other</string>
 		</dict>
 		<dict>
