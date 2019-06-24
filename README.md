@@ -1,5 +1,9 @@
-# ![ ](https://raw.githubusercontent.com/castyte/osssettings/master/osssettingsprefs/Resources/icon.png?token=AJEWHMY47VZF2J7VZDTDYK25C4VEO) OSS Settings
-##### OSS Settings is a project designed to gather as many settings as possible which may be useful to a user on jailbroken iOS into one package, similar to Springtomize or MiscSettings. OSS Settings is different as the project is fully open-source under the GPL-3.0 licence, and anyone can contribute.
+# OSS Settings
+OSS Settings is a project designed to change the entire aspect of your Springboard by providing as many options as possible to the end user, all in one package, on jailbroken iOS devices. 
 
-## How to contribute
-If you want to contribute to this project you can follow the steps below. Not a programmer? You can always [open an issue](https://github.com/castyte/osssettings/issues/new/choose) and share your ideas! More information about contributing can be found [here](https://github.com/castyte/osssettings/blob/master/CONTRIBUTING.md).
+Unlike other projects (such as Springtomize and MiscSettings), this project is completely free and open sourced, and always will be. 
+
+### Contributions
+As long as they follow the rules given [here](https://github.com/castyte/osssettings/blob/master/CONTRIBUTING.md), pull requests that add new options, or fix current ones are welcome and appreaciated. 
+
+Not a programmer? Issue reports and feature requests are also welcome, as they allow this project to be diverse, while also being less and less buggy. You can open an issues and/or feature request [here](https://github.com/castyte/osssettings/issues/new/choose)

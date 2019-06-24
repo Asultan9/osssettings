@@ -1,10 +1,9 @@
 # Contributing
 Thank you for considering contributing to this project. If you don't want to contribute code, you can always [open an issue](https://github.com/castyte/osssettings/issues/new) and share your ideas or report bugs/typos.
 
-## How to contribute
-Fork the repository (https://github.com/castyte/osssettings/fork)
+#### How to contribute
+Fork [this repository](https://github.com/castyte/osssettings/fork) and clone your own fork
 
-Clone your fork
 ```sh
 git clone https://github.com/username/repository
 ```
@@ -30,7 +29,7 @@ Create a new pull request using the templates below for the body:
 [Bug fix](https://raw.githubusercontent.com/castyte/osssettings/master/.github/PULL_REQUEST_TEMPLATE/bug.md)  
 [Feature addition](https://raw.githubusercontent.com/castyte/osssettings/master/.github/PULL_REQUEST_TEMPLATE/feature.md)  
 
-## Requirements
+### Requirements
 There are requirements that need to be met before a pull request can be accepted.
 
 - The feature must be tested and confirmed to work
@@ -43,5 +42,5 @@ There are requirements that need to be met before a pull request can be accepted
 
 If you have any questions about these requirements, feel free to ask.
 
-## Code of Conduct
+### Code of Conduct
 This project has a [Code of Conduct](https://github.com/castyte/osssettings/blob/master/CODE_OF_CONDUCT.md) and [LICENSE](https://github.com/castyte/osssettings/blob/master/LICENSE) which all contributors must follow.
