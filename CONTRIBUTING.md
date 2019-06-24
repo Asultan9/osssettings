@@ -1,7 +1,7 @@
 # Contributing
 Thank you for considering contributing to this project. If you don't want to contribute code, you can always [open an issue](https://github.com/castyte/osssettings/issues/new) and share your ideas or report bugs/typos.
 
-#### How to contribute
+### How to contribute
 Fork [this repository](https://github.com/castyte/osssettings/fork) and clone your own fork
 
 ```sh
