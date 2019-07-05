@@ -209,6 +209,17 @@ NSString *SAaccountString;
 %end
 
 
+// ---------- CATEGORY: System Wide (SA)
+
+// ---- CATEGORY: UI
+
+%hook SBHomeGrabberRotationView // Hide X homebar inside apps
+-(void)layoutSubviews {
+	if(![(NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"SWhideHomebarInApps" inDomain:domainString] boolValue]) return %orig;
+	[self setHidden:YES];
+}
+%end
+
 %end
 
 
