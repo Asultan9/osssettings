@@ -46,6 +46,18 @@
 			<key>placeholder</key>
 			<string>default</string>
 		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>defaults</key>
+			<string>com.castyte.osssettings</string>
+			<key>key</key>
+			<string>SAaccountString</string>
+			<key>label</key>
+			<string>Custom Apple Account Name:</string>
+			<key>placeholder</key>
+			<string>default</string>
+		</dict>
 	</array>
 	<key>title</key>
 	<string>OSSSettingsPrefs</string>

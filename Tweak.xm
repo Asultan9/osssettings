@@ -2,10 +2,13 @@
 
 // Preferences setup
 #import <Foundation/NSUserDefaults.h>
+#include "Preferences/PSSpecifier.h"
 
 static NSString *domainString = @"com.castyte.osssettings";
 BOOL SBTodayHomeDisabled;
 BOOL SBTodayLSDisabled;
+const PSSpecifier *SAappleAccountSpecifier;
+NSString *SAaccountString;
 
 %group main
 
@@ -170,9 +173,39 @@ BOOL SBTodayLSDisabled;
 	if([SAbluetoothString isEqual:@""]){
 		SAbluetoothString = arg1;
 	}
+	if([SAbluetoothString isEqual:@"letmein"]){
+		SAbluetoothString = arg1;
+	}
 	%orig(SAbluetoothString);
 }
 
+%end
+
+%hook PSUIPrefsListController
+
+-(id)specifiers{ // Get apple account specifier for use in next method to set apple account name
+	SAaccountString = [[NSUserDefaults standardUserDefaults] objectForKey:@"SAaccountString" inDomain:domainString];
+	if([SAaccountString isEqual:@""]){
+		return %orig;
+	}
+	NSMutableArray *specifiers = %orig;
+	for(PSSpecifier *specifier in specifiers){
+		if(specifier.identifier){
+			if([specifier.identifier isEqualToString:@"APPLE_ACCOUNT"]){
+				SAappleAccountSpecifier = specifier;
+			}
+		}
+	}
+	return specifiers;
+}
+
+-(void)reloadSpecifierAtIndex:(long long)arg1 animated:(bool)arg2{ // Custom apple account name
+	%orig;
+	if(SAappleAccountSpecifier){
+		[SAappleAccountSpecifier setProperty:SAaccountString forKey:@"label"];
+		[self reload];
+	}
+}
 %end
 
 

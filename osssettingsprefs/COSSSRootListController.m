@@ -27,6 +27,7 @@
 	waitpid(respringID, NULL, WEXITED);
 }
 
+
 -(void)githubIssue{
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/castyte/osssettings/issues/new/choose"]];
 }
@@ -38,6 +39,7 @@
 -(void)twitter_nepeta{
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/NepetaDev"]];
 }
+
 
 @end
 
@@ -135,3 +137,4 @@
     return _specifiers;
 }
 @end
+

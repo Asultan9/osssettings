@@ -1,10 +1,15 @@
 #import <Preferences/PSListController.h>
 
+
 @interface COSSSRootListController : PSListController
 @end
 
 @interface PrefsPageCredits : COSSSRootListController
 @end
+
+@interface PrefsPageSecret : COSSSRootListController
+@end
+
 
 @interface PrefsCatSpringboard : COSSSRootListController
 @end
