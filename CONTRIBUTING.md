@@ -35,7 +35,7 @@ There are requirements that need to be met before a pull request can be accepted
 - The feature must be tested and confirmed to work
 - If the feature causes another feature to not function properly you must make sure only one can be enabled at once and a message about it is included in the preferences.
 - Code needs to have documentation where necessary. If we believe the documentation is not clear enough, we will let you know on the pull request.
-- Features must not modify App Store applicatons, or include materials which may be deemed illegal in the United States or the United Kingdom
+- Features must not modify App Store apps.
 - Maintainers need to review and approve the changes before a pull request can be merged.
 - No commits to the master branch should be made. All changes should be made through pull requests.
 - If you wish to be included in the credits page you must add yourself to it and include it in your feature addition.
