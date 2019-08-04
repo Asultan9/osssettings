@@ -1,5 +1,5 @@
 # OSS Settings
-OSS Settings is a project designed to change the entire aspect of your Springboard by providing as many options as possible to the end user, all in one package, on jailbroken iOS devices. 
+OSS Settings is a project designed to change the entire aspect of your device by providing as many settings as possible, all in one package. 
 
 Unlike other projects (such as Springtomize and MiscSettings), this project is completely free and open sourced, and always will be. 
 
